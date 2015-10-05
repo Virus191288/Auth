@@ -25,25 +25,25 @@ List of features included in this package:
 Run this command in your application root:
 
 ```
-composer require cerbero/auth
+composer require Virus191288\Auth
 ```
 
 Add the service provider to the `providers` list in **config/app.php**:
 
 ```php
-Cerbero\Auth\AuthServiceProvider::class,
+Virus191288\Auth\AuthServiceProvider::class,
 ```
 
 Add the following route middleware in **app/Http/Kernel.php**:
 
 ```php
-'honeypot' => \Cerbero\Auth\Http\Middleware\Honeypot::class,
+'honeypot' => \Virus191288\Auth\Http\Middleware\Honeypot::class,
 ```
 
 And then run these two commands in your terminal:
 
 ```
-php artisan vendor:publish --provider="Cerbero\Auth\AuthServiceProvider”
+php artisan vendor:publish --provider="Virus191288\Auth\AuthServiceProvider”
 php artisan migrate
 ```
 
@@ -51,7 +51,7 @@ Now you have the database migrated with the **users** table and can customize th
 
 Finally, in order to display custom messages to the users, add the `DisplaysExceptions` trait to your exceptions handler:
 ```
-use Cerbero\Auth\Exceptions\DisplaysExceptions;
+use Virus191288\Auth\Exceptions\DisplaysExceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler {
