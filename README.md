@@ -1,6 +1,6 @@
 # Auth
 
-[![Author](https://github.com/cerbero90)](https://github.com/cerbero90)]
+[![Author](https://github.com/cerbero90)](https://github.com/cerbero90)!]
 
 ## add invite
 
