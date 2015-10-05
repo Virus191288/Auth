@@ -44,6 +44,8 @@ return array(
 
 		# route where the user registers his account
 		'route' => 'register',
+		
+		'invite' => true,
 
 		# the name of the route where the user is redirected after logging in
 		'redirect' => 'login.index',
