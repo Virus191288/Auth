@@ -4,13 +4,13 @@
     "keywords": [
         "laravel", "auth", "authentication", "login", "logout", "registration", "password reset"
     ],
-    "homepage": "https://github.com/cerbero90/auth",
+    "homepage": "https://github.com/Virus191288/Auth",
     "license": "MIT",
     "authors": [
         {
-            "name": "Andrea Marco Sartori",
-            "email": "andrea.marco.sartori@gmail.com",
-            "homepage": "https://github.com/cerbero90",
+            "name": "Pavel Kuzmin",
+            "email": "Virus191288@gmail.com",
+            "homepage": "https://github.com/Virus191288",
             "role": "Developer"
         }
     ],
