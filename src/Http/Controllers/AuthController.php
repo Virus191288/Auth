@@ -88,6 +88,18 @@ class AuthController extends Controller {
 	 */
 	public function register(RegisterRequest $request)
 	{
+		
+		$invenable = config('_auth.register.invite');
+		if ($invenable) {
+			$invite = new Invite;
+
+			$inv = $invite->getByCode($request['invite']);
+			if (!$inv) {
+				return redirect()->back()->withErrors('check code');
+			}
+		}
+		
+		
 		$this->bus->pipeThrough([
 			'Cerbero\Auth\Pipes\Register\Login',
 			'Cerbero\Auth\Pipes\Register\Notify',
