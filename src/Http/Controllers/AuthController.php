@@ -7,6 +7,7 @@ use Cerbero\Auth\Http\Requests\RegisterRequest;
 use Cerbero\Auth\Http\Requests\ResetRequest;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Routing\Controller;
+use Cerbero\Auth\Invite;
 
 class AuthController extends Controller {
 
