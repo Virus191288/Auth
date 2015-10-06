@@ -3,9 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use SleepingOwl\Models\SleepingOwlModel;
 
-class Invite extends SleepingOwlModel
+class Invite extends Model
 {
     protected $table = 'invites';
 
