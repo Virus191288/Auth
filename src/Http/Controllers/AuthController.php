@@ -7,6 +7,7 @@ use Cerbero\Auth\Http\Requests\RegisterRequest;
 use Cerbero\Auth\Http\Requests\ResetRequest;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Routing\Controller;
+use Cerbero\Auth\Invite;
 
 class AuthController extends Controller {
 
@@ -91,6 +92,15 @@ class AuthController extends Controller {
 	 */
 	public function register(RegisterRequest $request)
 	{
+		$invenable = config('_auth.register.invite');
+		if ($invenable) {
+			$invite = new Invite;
+			$inv = $invite->getByCode($request['invite']);
+			if (!$inv) {
+				return redirect()->back()->withErrors('check code');
+			}
+		}
+		
 		$this->bus->pipeThrough([
 			'Cerbero\Auth\Pipes\Register\Login',
 			'Cerbero\Auth\Pipes\Register\Notify',
