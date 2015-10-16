@@ -66,6 +66,8 @@ return [
 
 		# the view used to display the registration page
 		'view' => 'auth.register',
+		
+		'invite' => false,
 
 		# the rules to validate the registration fields
 		'rules' => [
